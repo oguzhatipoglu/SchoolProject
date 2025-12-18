@@ -18,6 +18,7 @@ public class TreatmentQueueTest {
 
         System.out.println("\n Printing Remaining Queue ");
         q1.printQueue();    //Printing remaining
+        System.out.println("The current size is: " + q1.size());
 
     }
 }
