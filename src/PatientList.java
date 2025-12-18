@@ -14,7 +14,7 @@ public class PatientList {
         Node a1 = new Node(veriable);
         if( head == null){  //if empty list
             head = a1;
-            return;}
+            return;}   //we need a return otherwise it will be a infinite loop
         Node temp = head;
         while (temp.next != null){ //Not empty
             temp = temp.next; }
