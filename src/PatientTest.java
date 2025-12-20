@@ -15,9 +15,9 @@ public class PatientTest {
         System.out.println("Found and remove ");
         p.printList();
 
-        //Find patient
 
-        Patient veriable = p.findPatient(120);
+
+        Patient veriable = p.findPatient(120);    //Find patient
         if (veriable == null || !veriable.Name.equals("Can")){  //if veriable isnt equals to Can we will a failed
             System.out.println("Not found patient");
             return; }
