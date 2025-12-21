@@ -53,7 +53,7 @@ public class HospitalSystem {
 
 
 
-    }    //printing data
+    }    //printing datas
 
     public void merge(ArrayList<Patient> list , int right , int mid , int left){
         int rightSize = right - mid;
