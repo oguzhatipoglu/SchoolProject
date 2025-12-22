@@ -2,17 +2,20 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class HospitalSystem {
-    PatientList patientList;
-    TreatmentQueue priorityQueue;
-    TreatmentQueue normalQueue;
-    DischargeStack dischargeStack;
-    HashMap < Integer , Patient> patientMap;
+    public PatientList patientList;
+    public TreatmentQueue priorityQueue;
+    public TreatmentQueue normalQueue;
+    public DischargeStack dischargeStack;
+    public HashMap < Integer , Patient> patientMap;
 
     public HospitalSystem(){
-        patientList = new PatientList();
-        priorityQueue = new TreatmentQueue();
-        dischargeStack = new DischargeStack();
-        patientMap = new HashMap<>(); }
+        this.patientList = new PatientList();
+        this.priorityQueue = new TreatmentQueue();
+        this.dischargeStack = new DischargeStack();
+        this.patientMap = new HashMap<>();
+        this.normalQueue = new TreatmentQueue();
+        this.priorityQueue = new TreatmentQueue();
+    }
 
     public void addPatient(Patient data){     //add a element
         patientList.addPatient((data));
@@ -47,24 +50,18 @@ public class HospitalSystem {
         System.out.println("Discharge data: ");
         dischargeStack.printStack();
 
-
-
-
-
-
-
     }    //printing datas
 
-    public void merge(ArrayList<Patient> list , int right , int mid , int left){
+    public void merge(ArrayList<Patient> list , int left , int mid , int right){
         int rightSize = right - mid;
         int leftSize = mid - left + 1;
         ArrayList<Patient> r1 = new ArrayList<>();
         ArrayList<Patient> l1 = new ArrayList<>();
+        for( int index = 0 ; index < leftSize ; index++){
+            l1.add(list.get(left + index)); }
         for( int index = 0 ; index < rightSize ; index++){
             r1.add(list.get(mid + index + 1));
         }
-        for( int index = 0 ; index < leftSize ; index++){
-            l1.add(list.get(left + 1)); }
         int rightIndex = 0;
         int leftIndex = 0;
         int mergedIndex = left;
@@ -86,22 +83,14 @@ public class HospitalSystem {
             leftIndex++;
             mergedIndex++; }
 
-
-
-
-
-
-
-
-
     }
-    public void mergeSortBySeverity(ArrayList<Patient> list , int right ,int left){
-        if(right>left){
+    public void mergeSortBySeverity(ArrayList<Patient> list , int left ,int right){
+        if(left<right){
             int mid = (right+ left) / 2;
 
             mergeSortBySeverity(list,left ,mid);
             mergeSortBySeverity(list , mid +1 , right);
-            merge(list, left , mid ,right);
+            merge(list, left, mid, right );
         }
     }
     public void printPatientSortedSever(){
