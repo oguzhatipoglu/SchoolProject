@@ -1,10 +1,10 @@
 public class PatientList {
     private class Node{
-        Patient veriable;
+        Patient variable;
         Node next;
 
         Node (Patient veriable){
-            this.veriable = veriable;
+            this.variable = veriable;
             this.next = null; } }
 
     private Node head;
@@ -26,7 +26,7 @@ public class PatientList {
             return; }
         Node temp = head;
         Node prev = null;
-        while ( temp != null && temp.veriable.id != id){   //We search a patient id
+        while ( temp != null && temp.variable.id != id){   //We search a patient id
             prev = temp;
             temp = temp.next; }
         if (prev == null){    //THİS İS A FİRST PATİENT
@@ -42,8 +42,8 @@ public class PatientList {
     public Patient findPatient(int id){
         Node temp = head;
         while(temp != null){
-            if(temp.veriable.id == id){
-            return temp.veriable; }
+            if(temp.variable.id == id){
+            return temp.variable; }
             temp = temp.next; }
         return null;
     }
@@ -55,8 +55,8 @@ public class PatientList {
     public void printList(){
         Node temp = head;
         while (temp != null){
-            System.out.println("Name: " + temp.veriable.Name + ", ID: " + temp.veriable.id +
-                    ", Age: " + temp.veriable.age + ", Severity: " + temp.veriable.severity );
+            System.out.println("Name: " + temp.variable.Name + ", ID: " + temp.variable.id +
+                    ", Age: " + temp.variable.age + ", Severity: " + temp.variable.severity );
             temp =temp.next;
         }
     }
