@@ -1,16 +1,16 @@
 public class Patient {
-    public String Name;
+    public String name;
     public int id;
     public int age;
     public int severity;
 
     public Patient(String Name  , int age , int id, int severity){
-        this.Name = Name;
+        this.name = Name;
         this.id = id;
         this.age = age;
         this.severity = severity;
     }
     public String toString() {
-        return "Name: " + Name  + "  - Age: " + age + "   - ID: " + id + "    - Severity: " + severity ;
+        return "Name: " + name  + "  - Age: " + age + "   - ID: " + id + "    - Severity: " + severity ;
     }
 }

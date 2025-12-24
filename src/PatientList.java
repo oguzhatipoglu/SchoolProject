@@ -3,15 +3,15 @@ public class PatientList {
         Patient variable;
         Node next;
 
-        Node (Patient veriable){
-            this.variable = veriable;
+        Node (Patient variable){
+            this.variable = variable;
             this.next = null; } }
 
     private Node head;
 
 
-    public void addPatient(Patient veriable){
-        Node a1 = new Node(veriable);
+    public void addPatient(Patient variable){   //adding list
+        Node a1 = new Node(variable);
         if( head == null){  //if empty list
             head = a1;
             return;}   //we need a return otherwise it will be a infinite loop
@@ -20,7 +20,7 @@ public class PatientList {
             temp = temp.next; }
         temp.next = a1; }
 
-    public void removePatient(int id){
+    public void removePatient(int id){      //remove list
         if (head == null){
             System.out.println("This is a empty list ");
             return; }
@@ -55,7 +55,7 @@ public class PatientList {
     public void printList(){
         Node temp = head;
         while (temp != null){
-            System.out.println("Name: " + temp.variable.Name + ", ID: " + temp.variable.id +
+            System.out.println("Name: " + temp.variable.name + ", ID: " + temp.variable.id +
                     ", Age: " + temp.variable.age + ", Severity: " + temp.variable.severity );
             temp =temp.next;
         }
