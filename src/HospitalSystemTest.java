@@ -1,7 +1,7 @@
 public class HospitalSystemTest {
     public static void main(String[] args){
         HospitalSystem s1 = new HospitalSystem();
-        System.out.println("Adding patients: ");
+        System.out.println("Adding patients: ");    //add patient
         s1.addPatient(new Patient("Oğuz" , 20 , 100 , 10));  //risk
         s1.addPatient(new Patient("Yavuz" , 30 , 101 , 1));
         s1.addPatient(new Patient("Ali" , 40 , 102 , 2));

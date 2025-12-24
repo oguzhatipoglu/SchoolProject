@@ -29,9 +29,9 @@ public class HospitalSystem {
     public Patient processTreatment(){      //checking priority
         TreatmentRequest data;
         if(priorityQueue.size() > 0){
-            data = priorityQueue.dequeue(); }
+            data= priorityQueue.dequeue(); }
         else if (normalQueue.size() >0 ){
-            data = normalQueue.dequeue(); }
+            data =  normalQueue.dequeue(); }
         else{
             return null; }
         DischargeRecord d1 = new DischargeRecord(data.patientID);
@@ -50,17 +50,17 @@ public class HospitalSystem {
         System.out.println("Discharge data: ");
         dischargeStack.printStack();
 
-    }    //printing datas
+    }    //print datas
 
     public void merge(ArrayList<Patient> list , int left , int mid , int right){
-        int rightSize = right - mid;
-        int leftSize = mid - left + 1;
+        int rightSize = right- mid;
+        int leftSize = mid -left + 1;
         ArrayList<Patient> r1 = new ArrayList<>();
         ArrayList<Patient> l1 = new ArrayList<>();
-        for( int index = 0 ; index < leftSize ; index++){
-            l1.add(list.get(left + index)); }
-        for( int index = 0 ; index < rightSize ; index++){
-            r1.add(list.get(mid + index + 1));
+        for( int index = 0 ; index< leftSize ; index++){
+            l1.add(list.get(left+ index)); }
+        for( int index = 0 ; index< rightSize ; index++){
+            r1.add(list.get(mid +index+ 1));
         }
         int rightIndex = 0;
         int leftIndex = 0;
@@ -74,11 +74,11 @@ public class HospitalSystem {
                 rightIndex++; }
             mergedIndex++; }
 
-        while (rightIndex < rightSize) {
+        while (rightIndex <rightSize) {
             list.set(mergedIndex , r1.get(rightIndex));
             rightIndex++;
             mergedIndex++; }
-        while (leftIndex < leftSize) {
+        while (leftIndex <leftSize) {
             list.set(mergedIndex, l1.get(leftIndex));
             leftIndex++;
             mergedIndex++; }
@@ -86,7 +86,7 @@ public class HospitalSystem {
     }
     public void mergeSortBySeverity(ArrayList<Patient> list , int left ,int right){
         if(left<right){
-            int mid = (right+ left) / 2;
+            int mid = (right+ left) /2;
 
             mergeSortBySeverity(list,left ,mid);
             mergeSortBySeverity(list , mid +1 , right);
