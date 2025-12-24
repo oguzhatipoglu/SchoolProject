@@ -15,7 +15,7 @@ public class TreatmentQueue {
         this.size = 0;
         this.rear = null;
     }
-    public void enqueue(TreatmentRequest data){   // add a element
+    public void enqueue(TreatmentRequest data){   // add an element
         Node n1 = new Node( data);
         if (front == null){
             front = n1;
@@ -28,7 +28,7 @@ public class TreatmentQueue {
         }
 
     }
-    public TreatmentRequest dequeue(){
+    public TreatmentRequest dequeue(){    //remove element
         if (front == null){   //empty list
             System.out.println("Empty list");
             return null; }
@@ -48,5 +48,5 @@ public class TreatmentQueue {
             System.out.println("Patient ID: " + temp.data.patientID + ". Arrival Time: " + temp.data.arrivalTime);
             temp = temp.next;
         }
-    }
+    }     //printing queue
 }

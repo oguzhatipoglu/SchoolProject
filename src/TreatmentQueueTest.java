@@ -2,7 +2,7 @@ public class TreatmentQueueTest {
     public static void main(String[] args) {
         TreatmentQueue q1 = new TreatmentQueue();
 
-        q1.enqueue(new TreatmentRequest(1 , false));   //Add a queueu in the list
+        q1.enqueue(new TreatmentRequest(1 , false));   //Add a queue in the list
         q1.enqueue(new TreatmentRequest(2, false));
         q1.enqueue(new TreatmentRequest(3,false));
         q1.enqueue(new TreatmentRequest(4,true));
