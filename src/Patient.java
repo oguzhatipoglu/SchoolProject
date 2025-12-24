@@ -10,7 +10,7 @@ public class Patient {
         this.age = age;
         this.severity = severity;
     }
-    public String toString() {
+    public String toString() {     //we need a 4th task
         return "Name: " + name  + "  - Age: " + age + "   - ID: " + id + "    - Severity: " + severity ;
     }
 }

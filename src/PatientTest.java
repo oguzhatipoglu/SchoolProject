@@ -9,9 +9,9 @@ public class PatientTest {
         p.addPatient(new Patient("Muharrem" ,56, 140 , 1));
         System.out.println("All patient added");
         p.printList();
-        //Remove patient
-        System.out.println();
-        p.removePatient(100);
+
+        System.out.println();       //Remove patient
+        p.removePatient(100);  // oğuz found and delete
         System.out.println("Found and remove ");
         p.printList();
 
