@@ -1,6 +1,5 @@
 public class DischargeStack {
 
-
     private static class Node{
         DischargeRecord data;
         Node next;

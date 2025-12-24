@@ -12,7 +12,7 @@ public class DischargeStackTest {
 
 
         System.out.println("popped data "+ s1.pop());    //delete element
-        System.out.println("popped data " + s1.pop());
+        System.out.println("popped data " + s1.pop());   //last in first out
         System.out.println("all test pass");
 
         s1.printStack();
