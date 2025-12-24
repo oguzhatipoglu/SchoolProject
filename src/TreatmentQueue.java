@@ -15,7 +15,7 @@ public class TreatmentQueue {
         this.size = 0;
         this.rear = null;
     }
-    public void enqueue(TreatmentRequest data){   // add an element
+    public void enqueue(TreatmentRequest data){   // add a element
         Node n1 = new Node( data);
         if (front == null){
             front = n1;

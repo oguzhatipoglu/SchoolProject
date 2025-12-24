@@ -13,12 +13,12 @@ public class TreatmentQueueTest {
         q1.printQueue();
         System.out.println("\n deleting (Dequeue)  ");    //delete first 3 data
         q1.dequeue();
-        q1.dequeue();     //first in first out
+        q1.dequeue();     //first in first out rules
         q1.dequeue();
 
         System.out.println("\n Printing Remaining Queue ");
-        q1.printQueue();    //Printing remaining
-        System.out.println("The current size is: " + q1.size());  //Printing size
+        q1.printQueue();    //Print remaining
+        System.out.println("The current size is: " + q1.size());  //Print size
 
     }
 }
