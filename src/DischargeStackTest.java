@@ -1,7 +1,7 @@
 public class DischargeStackTest {
     public static void main(String[] args){
         DischargeStack s1 = new DischargeStack();
-        //adding element
+        //add element
         s1.push(new DischargeRecord(100));
         s1.push(new DischargeRecord(200));
         s1.push(new DischargeRecord(300));

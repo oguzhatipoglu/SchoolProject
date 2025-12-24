@@ -21,13 +21,13 @@ public class DischargeStack {
         DischargeRecord d2 = top.data;
         top = top.next;
         return d2; }
-    public DischargeRecord peek(){       //it is show the top of element
+    public DischargeRecord peek(){       //it show the top element
         if(top== null){    //if it is correct it will be a empty list
             return null; }
         return top.data;
         }
 
-    public void printStack(){     //printing element
+    public void printStack(){     //print element
         System.out.println("-------------");
         Node temp = top;
         while (temp != null){
