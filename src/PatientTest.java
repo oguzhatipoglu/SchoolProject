@@ -7,8 +7,8 @@ public class PatientTest {
         p.addPatient(new Patient("Can" ,70, 120 , 4));
         p.addPatient(new Patient("Ahmet" ,90 , 130 , 7));
         p.addPatient(new Patient("Muharrem" ,56, 140 , 1));
-        System.out.println("All patient added");
         p.printList();
+        System.out.println("All patient added");
 
         System.out.println();       //Remove patient
         p.removePatient(100);  // oğuz found and delete
