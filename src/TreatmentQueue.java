@@ -13,6 +13,7 @@ public class TreatmentQueue {
     public TreatmentQueue(){
         this.front = null;
         this.size = 0;
+
         this.rear = null;
     }
     public void enqueue(TreatmentRequest data){   // add a element
