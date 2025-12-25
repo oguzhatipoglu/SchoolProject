@@ -28,7 +28,7 @@ public class DischargeStack {
         }
 
     public void printStack(){     //print element
-        System.out.println("-------------");
+        System.out.println();
         Node temp = top;
         while (temp != null){
             System.out.println("Patient ID: " + temp.data.patientID + " Discharge time: " + temp.data.dischargeTime);
