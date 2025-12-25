@@ -35,7 +35,7 @@ public class TreatmentQueue {
         TreatmentRequest temp = front.data;
         front = front.next;
         size--;
-        if (front == null){  //We check did delete a last element
+        if (front == null){  //We check delete a last element
             rear = null; }
         return temp;
     }
