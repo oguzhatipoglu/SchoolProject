@@ -14,7 +14,7 @@ public class PatientList {
         Node a1 = new Node(variable);
         if( head== null){  //if empty list
             head = a1;
-            return;}   //we need a return otherwise it will be a infinite loop
+            return;}   //exit list empty
         Node temp = head;
         while (temp.next != null){ //Not empty this list
             temp = temp.next; }
