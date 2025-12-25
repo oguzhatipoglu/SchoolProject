@@ -28,7 +28,7 @@ public class HospitalSystemTest {
 
         System.out.println("Request added: ");
 
-        System.out.println("Processing 4 request (priority first): ");
+        System.out.println("Processing 4 request priority first: ");
         s1.processTreatment();
         System.out.println("First patient gone.");
         s1.processTreatment();
